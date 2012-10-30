@@ -12,7 +12,7 @@ unsigned int diff = 500;
 
 void setup()
 {
-  Wire.begin();                   // Join I2C bus
+  Wire.begin();                  
   Serial.begin(9600);
   delay(diff);
 }
@@ -21,7 +21,7 @@ void loop()
 {
   int i;
   for(i=0;i<4;i++){
-      deviceWrite(rows[i]);         // Turn on LEDs connected to P1 and P2
+      deviceWrite(rows[i]);        
       byte  key = deviceRead(addr);
       key  = key >> 4;
    if (key != 0){
